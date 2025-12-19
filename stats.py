@@ -17,11 +17,12 @@ def get_character_counts(contents): #function to count the occurrence of each ch
     characters = {} #declare empty dictionary
 
     for c in contents: #for loop to parse each character
+        char = c.lower()
         #check if the character is already in the dictionary or not and update or add accordingly
-        if c in characters:
-            characters[c.lower()] += 1
+        if char in characters:
+            characters[char] += 1
         else:
-            characters[c.lower()] = 1
+            characters[char] = 1
 
     return characters #return dictionary
 ###end get_character_coutns(str)
