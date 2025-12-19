@@ -26,3 +26,21 @@ def get_character_counts(contents): #function to count the occurrence of each ch
 
     return characters #return dictionary
 ###end get_character_coutns(str)
+
+def sort_character_counts(characters): #function to update the characters dictionary to be a list of dictionaries and return that list sorted.
+     #declare empty lists
+    sortedCharacters = []
+    keys = list(characters.keys())
+
+    #loop through the keys list and add key and value pairs to individual dictionaries to be added to the list.
+    for k in keys:
+        sortedCharacters.append({"char": k, "num": characters[k]})
+    
+    sortedCharacters.sort(reverse=True, key=sort_on)
+
+    return sortedCharacters #return a sorted list of dictionaries
+###end sort_character_coutns(dictionary)
+
+def sort_on(characters): #helper function for sort_character_counts to choose what to sort by
+    return characters["num"] #return the key to base the sort on
+###end sort_on(dictionary)
