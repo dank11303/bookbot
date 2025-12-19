@@ -6,7 +6,7 @@ def main():#main function that runs the program
     characterCounts = get_character_counts(get_book_text("books/frankenstein.txt"))
 
     for c in characterCounts:
-        print(f"{c}: {characterCounts[c]}")
+        print(f"\'{c}\': {characterCounts[c]}")
 
 ###end main function
 
